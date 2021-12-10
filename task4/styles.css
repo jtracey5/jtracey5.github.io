@@ -1,0 +1,481 @@
+@font-face {
+	font-weight: 400;
+	font-family: Roboto;
+	src: url('fonts/Roboto-Regular.ttf');
+}
+
+::placeholder {
+  color: #d9dadc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+}
+
+hr {
+  border: 2px solid #ffd800;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .inner-container {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 25px;
+  }
+}
+
+/*
+ * Золотистая кнопка
+ */
+
+.golden-button {
+  border: 0;
+  color: #000;
+  cursor: pointer;
+  padding: 13px 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background-color: #ffd800;
+}
+
+.golden-button:hover {
+  background-color: #ffde2a;
+}
+
+/*
+ * Информационные блоки
+ */
+
+.info-header h1 {
+  font-size: 24pt;
+}
+
+.info-body h2,
+.info-header h2 {
+  margin: 10px 0;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.info-header {
+  padding: 60px 0 30px;
+}
+
+.info-body {
+  display: flex;
+  padding: 30px 0;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 660px) {
+  .info-body {
+    flex-direction: column;
+  }
+  
+  aside {
+    margin-bottom: 20px;
+  }
+}
+
+aside {
+  padding: 10px;
+}
+
+aside > img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+aside > p {
+  color: #7b6a1e;
+  font-size: 11pt;
+}
+
+/*
+ * Лого
+ */
+ 
+.logo {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.logo > .logo-big-text > a {
+  color: #FFF;
+  font-size: 18pt;
+  text-decoration: none;
+}
+
+.logo > .logo-small-text {
+  height: 13px;
+  font-size: 8pt;
+  margin-top: 11px;
+  margin-left: 5px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: #ffd800;
+}
+
+/*
+ * Заголовок
+ */
+
+.header-container {
+  height: 587px;
+  background-size: cover;
+  background-image: url('img/header.jpg');
+}
+
+header {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/*
+ * Меню
+ */
+
+.menu {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.menu > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 660px) {
+  header {
+    margin-bottom: -190px;
+  }
+  .menu > ul {
+    flex-direction: column;
+  }
+  .menu > ul > li {
+    margin-bottom: 10px;
+  }
+}
+
+.menu > ul > li {
+  list-style-type: none; 
+}
+
+.menu > ul > li:first-child {
+  flex-grow: 1;
+}
+
+.menu > ul > li > a {
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu > ul > li > a:hover,
+.menu > ul > li > a:active {
+  color: #000;
+  background-color: #ffd800;
+}
+
+/*
+ * Форма регистрации
+ */
+
+.register-form {
+  transform: translate(0, 60%);
+}
+
+.register-form > .register-form-header {
+  color: #fff;
+  font-size: 24pt;
+  margin-bottom: 40px;
+}
+
+.register-form > .register-form-fields {
+  display: flex;
+  margin: 0 auto;
+  max-width: 500px;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 660px) {
+  .register-form > .register-form-fields {
+    flex-direction: column;
+  }
+}
+
+.register-form > .register-form-fields > input {
+  margin: 10px 5px 0 0;
+}
+
+.register-form > .register-form-fields > input[type=text] {
+  color: #d9dadc;
+  padding: 13px 20px;
+  border-radius: 2px;
+  border: 1px solid #d9dadc;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0);
+}
+
+/*
+ * Основной блок
+ */
+ 
+.main-container {
+  background-color: #191b29;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.main > .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main > .column > .phone {
+  width: 250px;
+  position: relative;
+  margin: -100px 20px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .main > .column > .phone {
+    width: 200px;
+    margin-top: -83px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .main > .column > .phone {
+    display: none;
+  }
+
+  .main > .column > .section > .header1 {
+    font-size: 14pt;
+  }
+}
+
+.main > .column > .section {
+  padding: 25px 0;
+}
+
+.main > .column > .section > p {
+  padding: 10px;
+  color: #686a82;
+  text-align: left;
+}
+
+.main > .column > .section > .header1 {
+  color: #fff;
+  padding: 15px 0;
+  text-align: left;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.main > .column > .section > .header1 > img {
+  max-width: 35px;
+  max-height: 35px;
+  margin: 0 10px 0 0;
+}
+
+/*
+ * Блок с командой
+ */
+
+.team-container {
+  background-color: #ffd800;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+ * Блок с приложением
+ */
+
+.app1-container {
+  background-color: #ffe347;
+}
+
+.app2-container {
+  background-color: #fff;
+}
+
+.app1-container,
+.app2-container {
+  padding: 35px 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 992px) {
+  .app1-container,
+  .app2-container {
+    padding: 35px 25px;
+    text-align: left;
+  }
+}
+
+.app1-container > .inner-container,
+.app2-container > .inner-container,
+.app1-container h2,
+.app2-container h2 {
+  text-align: left;
+}
+
+.app1-container img {
+  right: 0;
+  width: 65%;
+  margin-top: -40px;
+  position: absolute;
+}
+
+.app1-container p,
+.app2-container p {
+  padding: 15px 0;
+  text-align: left;
+}
+
+.app2-container input[type=button] {
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background-color: #191b29;
+}
+
+.app2-container input[type=button]:hover {
+  background-color: #323548;
+}
+
+.app1-container > .inner-container > .left,
+.app2-container > .inner-container > .left {
+  width: 30%;
+}
+
+@media screen and (max-width: 660px) {
+  .app1-container img {
+    display: none;
+  }
+
+  .app1-container > .inner-container > .left,
+  .app2-container > .inner-container > .left {
+    width: 100%;
+  }
+}
+
+/*
+ * Блок с информацией о приложении
+ */
+
+.app-info-container {
+  background-size: cover;
+  background-image: url('img/header.jpg');
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.app-info > .info-body h2, 
+.app-info > .info-header {
+  color: #fff;
+}
+ 
+.app-info > .info-body p {
+  color: #ced0d7;
+}
+ 
+.app-info > .info-body img {
+  max-width: 70px;
+  max-height: 70px;
+}
+ 
+.app-info > .info-body input[type=button] {
+  margin: 0 auto;
+}
+
+/*
+ * Подвал
+ */
+ 
+.footer-container {
+  background-color: #191b29;
+}
+ 
+.footer-container p {
+  color: #fff;
+  padding: 50px;
+  font-size: 10pt;
+}
+
+footer {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 660px) {
+  footer {
+    flex-direction: column;
+  }
+  
+  footer ul {
+    margin-bottom: 25px;
+  }
+}
+
+footer ul {
+  flex: auto;
+}
+
+footer li {
+  padding: 7px 0;
+  list-style-type: none; 
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
